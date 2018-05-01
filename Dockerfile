@@ -13,7 +13,8 @@ RUN apt-get update \
  && apt-get install -y \
             --no-install-recommends \
             spotify-client \
-            libcanberra-gtk-module
+            libcanberra-gtk-module \
+ && rm -rf /var/lib/apt/lists/*
 
 USER $user
 
